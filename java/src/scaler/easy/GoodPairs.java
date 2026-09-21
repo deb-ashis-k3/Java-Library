@@ -8,8 +8,6 @@ public class GoodPairs {
         int [] list = {1,2,3,4,2};
         int target = 4;
         System.out.println(goodPairs.solve(list, target));
-        
-
     }
 
     public int solve(int[] list, int B) {

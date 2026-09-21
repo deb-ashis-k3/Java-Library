@@ -9,7 +9,6 @@ public class PrimeNumbers {
         System.out.println("Check Prime:  Enter Number ");
         System.out.println(primeNumbers.isPrime(sc.nextInt()));
         sc.close();
-
     }
 
     public boolean isPrime(int n) {

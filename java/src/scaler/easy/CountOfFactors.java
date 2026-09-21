@@ -10,7 +10,6 @@ public class CountOfFactors {
         int result = cof.solve(sc.nextInt());
         System.out.println("Result: " + result);
         sc.close();
-
     }
 
     public int solve(int n) {
