@@ -29,7 +29,6 @@ public class ArrayRotationN_TimesToWardsLeft {
             left++;
             right--;
         }
-        System.out.println(Arrays.toString(arr));
         return arr;
     }
 }
