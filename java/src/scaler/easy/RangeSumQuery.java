@@ -13,22 +13,25 @@ public class RangeSumQuery {
     }
 
     public long[] solve(int[] arr, int query[][]) {
-        if(arr==null || query== null) return new long[0];
+        if (arr == null || query == null)
+            return new long[0];
 
-        int arrSize= arr.length;
-        int querySize= query.length;
-        long [] prerixArr= new long[arrSize+1];
-        long[] responseArr= new long[ querySize];
-        
-        for(int i=0; i<arrSize; i++){
-            prerixArr[i+1]= prerixArr[i]+ arr[i];
+        int arrSize = arr.length;
+        int querySize = query.length;
+
+        long[] prerixArr = new long[arrSize + 1];
+        long[] responseArr = new long[querySize];
+
+        for (int i = 0; i < arrSize; i++) {
+            prerixArr[i + 1] = prerixArr[i] + arr[i];
         }
 
-        for(int i=0; i<querySize; i++){
-            int left= query[i][0];
+        for (int i = 0; i < querySize; i++) {
+            int left = query[i][0];
             int right = query[i][1];
-            responseArr[i]= prerixArr[right+1]- prerixArr[left];
+            responseArr[i] = prerixArr[right + 1] - prerixArr[left];
         }
-        return  responseArr;
+        return responseArr;
     }
+
 }
