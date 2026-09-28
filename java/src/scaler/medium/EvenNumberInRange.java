@@ -2,13 +2,13 @@ package scaler.medium;
 
 import java.util.*;
 
-public class SumOfOddIndexEleInGivenRange {
+public class EvenNumberInRange {
     public static void main(String[] args) {
-        int[] arr = { 2, 8, 3, 9, 15};
-        int[][] queries = {{1, 4},{0, 2},{2, 3} };
+        EvenNumberInRange evenNumberInRange = new EvenNumberInRange();
+        int[] arr = { 2, 1, 8, 3, 9, 6 };
+        int[][] queries = { { 0, 3 }, { 3, 5 }, { 1, 3 }, { 2, 4 } };
 
-        SumOfOddIndexEleInGivenRange sumOfOddIndexEleInGivenRange = new SumOfOddIndexEleInGivenRange();
-        System.out.println(Arrays.toString(sumOfOddIndexEleInGivenRange.solve(arr, queries)));
+        System.out.println(Arrays.toString(evenNumberInRange.solve(arr, queries)));
 
     }
 
@@ -18,10 +18,10 @@ public class SumOfOddIndexEleInGivenRange {
 
         int arrLen = arr.length;
         int[] prefixArr = new int[arrLen + 1];
-        for (int i = 0; i < arrLen; i++) {
-            prefixArr[i + 1] = (i % 2) != 0 ? prefixArr[i] + arr[i] : prefixArr[i];
-        }
 
+        for (int i = 0; i < arrLen; i++) {
+            prefixArr[i + 1] = prefixArr[i] + (arr[i] % 2 == 0 ? 1 : 0);
+        }
         int queryLen = queries.length;
         int[] response = new int[queryLen];
         for (int i = 0; i < queryLen; i++) {
@@ -31,4 +31,5 @@ public class SumOfOddIndexEleInGivenRange {
         }
         return response;
     }
+
 }
