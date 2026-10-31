@@ -3,7 +3,7 @@ package topics.others.easy;
 public class SumOfAllSubArrays {
     public static void main(String[] args) {
         SumOfAllSubArrays sumOfAllSubArrays = new SumOfAllSubArrays();
-        int[] arr = { 4, 5, 6 };
+        int[] arr = { 3, 2, 4, 1, 2, 6, 8, 1 };
         System.out.println(sumOfAllSubArrays.solve(arr));
 
     }
@@ -15,7 +15,7 @@ public class SumOfAllSubArrays {
         }
         long sum = 0;
         for (int i = 0; i < N; i++) {
-            System.out.println(arr[i] + " * " + (i + 1) + " * " + (N - i)+" = " +(arr[i]* (i + 1) * (N - i)));
+            System.out.println("Occurance of index : " + i + " = " + (i + 1) * (N - i));
             sum += arr[i] * (i + 1) * (N - i);
         }
         return sum;

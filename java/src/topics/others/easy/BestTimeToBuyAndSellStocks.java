@@ -2,11 +2,8 @@ package topics.others.easy;
 
 public class BestTimeToBuyAndSellStocks {
     public static void main(String[] args) {
-
         BestTimeToBuyAndSellStocks bestTimeToBuyAndSellStocks = new BestTimeToBuyAndSellStocks();
-
         int[] arr = { 1, 4, 5, 2, 4 };
-
         System.out.println(bestTimeToBuyAndSellStocks.maxProfit(arr));
     }
 
