@@ -1,10 +1,14 @@
 package scaler.easy;
 
 public class PrimeNumber {
+    // Check the sample number and print whether it is prime.
     public static void main(String[] args) {
+        int n = 4;
+        System.out.println(isPrime(n));
 
     }
 
+    // Return true when n has no positive divisors other than 1 and itself.
     static boolean isPrime(int n) {
 
         // A prime number must be greater than 1.

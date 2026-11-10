@@ -3,6 +3,7 @@ package scaler.easy;
 import java.util.*;
 
 public class GoodPairs {
+    // Run each pair-search approach with the same sample numbers and target.
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8 };
         int target = 7;
@@ -11,6 +12,7 @@ public class GoodPairs {
         System.out.println(approach3(arr, target));
     }
 
+    // Try pairs using nested loops and return 1 when a tested pair reaches target.
     static int approach1(int[] arr, int target) {
         // Compare values in nested loops and return as soon as a matching sum is found.
         int size = arr.length - 1;
@@ -23,6 +25,7 @@ public class GoodPairs {
         return 0;
     }
 
+    // Sort the values, then move two pointers to find a pair with the target sum.
     static int approach2(int[] arr, int target) {
 
         // Sorting enables a two-pointer search, but changes the input array's order.
@@ -46,6 +49,7 @@ public class GoodPairs {
         return 0;
     }
 
+    // Remember earlier values so each new value can quickly look for its partner.
     static int approach3(int[] arr, int target) {
 
         HashSet<Integer> hSet = new HashSet<>();

@@ -1,10 +1,12 @@
 package scaler.easy;
 
 public class CountOfFactors {
+    // Try counting the positive factors of 4 and print the answer.
     public static void main(String[] args) {
         System.out.println(solve(4));
     }
 
+    // Return how many positive whole numbers divide n without a remainder.
     static int solve(int n) {
         // A non-positive number does not have a finite set of positive factors.
         if (n <= 0)
