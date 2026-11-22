@@ -2,16 +2,6 @@ package scaler.easy;
 
 import java.util.Arrays;
 
-/**
- * Provides efficient range-sum queries for a static integer array.
- *
- * <p>The implementation preprocesses the data once into a prefix-sum array,
- * allowing each query to be answered in O(1) time by subtracting the cumulative
- * sums at the query boundaries. This is ideal when the same dataset is reused
- * across many repeated range queries.</p>
- *
- * <p>Null inputs are treated as invalid and return an empty result array.</p>
- */
 public class RangeSumQuery {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -38,7 +28,6 @@ public class RangeSumQuery {
             int right = B[i][1];
             result[i] = prefixArr[right + 1] - prefixArr[left];
         }
-
         return result;
 
     }
